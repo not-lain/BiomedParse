@@ -119,7 +119,7 @@ Example inference code is provided in `example_prediction.py`. We provided examp
 Check our inference examples for DICOM images at inference_examples_DICOM.ipynb.
  
 ### Model Setup
-```sh
+```py
 from PIL import Image
 import torch
 from modeling.BaseModel import BaseModel
@@ -143,7 +143,7 @@ with torch.no_grad():
 ```
 
 ### Segmentation On Example Images
-```sh
+```py
 # RGB image input of shape (H, W, 3). Currently only batch size 1 is supported.
 image = Image.open('examples/Part_1_516_pathology_breast.png', formats=['png']) 
 image = image.convert('RGB')
